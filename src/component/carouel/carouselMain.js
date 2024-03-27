@@ -23,24 +23,34 @@ const CarouselMain = ({ dept }) => {
       <div className='eventregmain'>
         <div className='eventreg'>
           {dept.map((image) => (
-            <section className="Slidercontainermain" id={image.id} key={image.id} style={{ display: activeId === image.id ? 'flex' : 'none' }}>
-              <div class="blurry-background"></div>
-              <div className='eventimage' onClick={() => handleImageDownload(image.src)}><img className='eventimage22' src={image.src} alt={image.title} /></div>
-              <div className='eventdetails'>
-                <h2 className='eventimagetittle'>{image.title}</h2>
-                { image.filelink && (
-                  <p className='eventimageptag'>Download Rules here: <DownloadPDF pdflink={image.filelink} pdfname={image.filename}/> </p>
-                )}
-                
-                {image.reglink && (  
-                    <button>
-                  <a href={image.reglink} style={{ textDecoration: 'none' }}>Register</a>
-                  </button>
-
-                  
-                )}
-              </div>
+            <section className='eventdetailsmaincontainer'  id={image.id} key={image.id} style={{ display: activeId === image.id ? 'flex' : 'none' }}>
+                  <div className='Slidercontainermain'>
+                  <div className='eventimage' onClick={() => handleImageDownload(image.src)}><img className='eventimage22' src={image.src} alt={image.title} /></div>
+                  <div className='eventdetails'>
+                    <h2 className='eventimagetittle'>{image.title}</h2>
+                    { image.filelink && (
+                      <div style={{ display:'flex',flexDirection:'row',marginRight:'10px'}}><p className='eventimageptag'>Download Rules here:  </p><DownloadPDF pdflink={image.filelink} pdfname={image.filename}/></div>
+                    )}
+                    
+                    {image.reglink && (  
+                        <button className='registerbutton'>
+                      <a className='registerbuttona' href={image.reglink} style={{ textDecoration: 'none' }}>Register</a>
+                      </button>
+                    )}
+                    {image.description &&(
+                <div className='eventdescription inner'>{image.description.split('\n').map((line,index) => (
+                  <p key={index} className='eventdesrp'>{line}</p>
+                ))}</div>
+              )}
+                  </div>
+                </div>
+              {image.description &&(
+                <div className='eventdescription outer'>{image.description.split('\n').map((line,index) => (
+                  <p key={index} className='eventdesrp'>{line}</p>
+                ))}</div>
+              )}
             </section>
+            
           ))}
         </div>
       </div>

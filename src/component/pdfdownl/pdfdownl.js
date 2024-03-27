@@ -12,7 +12,7 @@ const DownloadPDF = ({ pdflink, pdfname }) => {
 
   return (
     <div>
-      <button onClick={downloadPdf}>Rules</button>
+      <button className='filebutton' onClick={downloadPdf}>Rules</button>
     </div>
   );
 };
