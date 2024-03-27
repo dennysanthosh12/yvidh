@@ -46,7 +46,7 @@ background: linear-gradient(180deg, #0f0c29 9%, #302b63 23%, #24243e 84%);
   }
   
   .name {
-    font-size: 2em;
+    font-size: 1.8em;
     color: #2d3436;
     display: flex;
     font-weight: bold;

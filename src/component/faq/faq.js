@@ -82,7 +82,7 @@ export default function Fag({handleCreditsClick}) {
           <div className="footercontent">
             <div className="fleft fitem">
               <div className="fleftinner">
-                <h5><a className="flefta" href="">WWW.Yvidh.live</a></h5>
+                <h5><a className="flefta" href="">www.yvidh.live</a></h5>
               </div>
             </div>
             <div className="fcenter fitem">
@@ -90,8 +90,8 @@ export default function Fag({handleCreditsClick}) {
                 <div className="fcenterimg">
                 <img src="./assets/home/yvidh.png"/>
                 </div>
-                <div><h5>Powered by Yvidh24</h5></div>
-                <div><h5><a href="#Credits" onClick={handleCreditsClick}> website committe</a></h5></div>
+                <div><h5 className='powered'>Powered by Yvidh24</h5></div>
+                <div><h5 className='committelink'><a href="#Credits" onClick={handleCreditsClick}> website committe</a></h5></div>
                 
                 
                 

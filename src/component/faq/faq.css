@@ -237,7 +237,7 @@
   .frightinner a{
     height: 100%;
   }
-  .fcenter h5{
+  .powered{
     margin: 0;
     font-size: 0.9vh;
   }
@@ -252,5 +252,7 @@
     align-items: center;
     justify-content: center;
   }
-
+  .committelink{
+    font-size: 3.5vw;
+  }
 }
